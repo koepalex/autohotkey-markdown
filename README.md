@@ -3,7 +3,7 @@
 This is a simple [AutoHotkey](http://www.autohotkey.com/) script. It should allow easy Markdown writing independing from the Editor.
 ## Feature
 Adding the related Markdown syntax element and set the correct cursor position for writing.
-
+  
 * alt + i 	(emphatic text)
 * alt + b	(strong text)
 * alt + c	(source code)
@@ -12,12 +12,14 @@ Adding the related Markdown syntax element and set the correct cursor position f
 * alt + ,	(start of ordered list)
 * alt + t	(insert 4 spaces, helpfull for neasting)
 * alt + -	(horizontal line)
+  
 ## Special Feature
 This hotkeys working with GUI dialogs for easier usage.
-
-* alt + l	(start "Link Wizard") 
-* alt + p	(start "Image Wizard") 
+  
+* alt + l	(start "Link Wizard")
+* alt + p	(start "Image Wizard")
 * alt + #	(start "Code Beautifier")
+  
 ### Link Wizard
 Shows simple window with edit boxes for the URL and the Name. While pressing OK, the Markdown-Text will inserted at cursor position.
 ### Image Wizard
