@@ -26,7 +26,7 @@ Shows simple window with edit boxes for the URL and the Name. While pressing OK,
 Same as "Link Wizard" but with possibility to show preview of the image.
 ### Code Beautifier
 Script will let you browse for HTML file (e.g. generated HTML from  markdown) and copy the content to a second file, same name like selected file but *_converted* will be added.  
-If there are **<code></code>** sections within the HTML, some transformation (see below) will be happen. This lead to easier to read source code within HTML.
+If there are **`<code></code>`** sections within the HTML, some transformation (see below) will be happen. This lead to easier to read source code within HTML.
   
 1. Replace tabulator with 4 spaces
 2. Replace each space with `&nbsp;`
