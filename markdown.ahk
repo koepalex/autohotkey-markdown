@@ -14,6 +14,7 @@
 ;| alt + b	| strong text 					| **text**			| <strong>text</strong>				|
 ;| alt + c	| source code					| `int main()`		| <code>int main ()</code>			|
 ;| alt + q	| quote 						| > cite			| <blockquote>cite</blockquote>		|
+;| alt + n	| new line						| __ Enter			| <br />							|
 ;| alt + .	| start unordered list			| * first point		| <ul><li>first point</li></ul>		|
 ;| alt + ,	| start ordered list			| 1. first point	| <ol><li>first point</li></ol>		|
 ;| alt + t	| insert 4 tabs (as list indent)| ____(_ mean blank)| ____(_ mean blank)				|
@@ -67,18 +68,23 @@ Send {>}
 Send {space}
 return
 
+;Markdown line break are equal to two blanks
+!n::
+Send {space 2}{Enter}
+return
+
 ;Markdown * text will shown as bullet list <ul><li></li></ul>
 !.::
-Send {space 2}	;start new line, some markdown scripts need it explicit
-Send {Enter}
+;start new line, some markdown scripts need it explicit
+Send {Enter}{space 2}{Enter}
 Send {*}
 Send {space}
 return
 
 ;Markdown 1. text will shown as bullet list <ol><li></li></ol>
 !,::
-Send {space 2}	;start new line, some markdown scripts need it explicit
-Send {Enter}
+;start new line, some markdown scripts need it explicit
+Send {Enter}{space 2}{Enter}
 Send {1}{.}
 Send {space}
 return
@@ -125,13 +131,14 @@ Gui 2:Add, Edit, vPicUrl
 Gui 2:Add, Text,, Please enter alternative text for the Picture:
 Gui 2:Add, Edit, vPicAlt
 Gui 2:Add, Button, default ys, &Preview
+Gui 2:Add, Button,, &OK
 Gui 2:Add, Button,, &Cancel
 Gui 2:Show
 return
 
 2ButtonOK:
 Gui, 2:Submit
-Send {![}
+Send {!}{[}
 Send %PicAlt%
 Send {]}{(}
 Send %PicUrl%

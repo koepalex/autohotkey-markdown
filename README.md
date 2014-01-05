@@ -8,6 +8,7 @@ Adding the related Markdown syntax element and set the correct cursor position f
 * alt + b	(strong text)
 * alt + c	(source code)
 * alt + q 	(quote)
+* alt + n	(new line)
 * alt + .	(start of unordered list)
 * alt + ,	(start of ordered list)
 * alt + t	(insert 4 spaces, helpfull for neasting)
